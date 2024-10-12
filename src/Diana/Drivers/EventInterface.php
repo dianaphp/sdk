@@ -4,7 +4,7 @@ namespace Diana\Drivers;
 
 interface EventInterface
 {
-    public function listen(string $action, callable $callback): void;
+    public function fire(string $action, array $payload = []): void;
 
-    public function fire(string $action, mixed $payload = null): void;
+    public function getClass(): string;
 }

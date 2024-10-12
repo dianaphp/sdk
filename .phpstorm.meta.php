@@ -5,10 +5,10 @@ namespace PHPSTORM_META {
         \Psr\Container\ContainerInterface::get('') => [
             "" == "@",
         ],
-        \Diana\Drivers\Drivers\ContainerInterface::get('') => [
+        \Diana\Drivers\ContainerInterface::get('') => [
             "" == "@",
         ],
-        \Diana\Drivers\Drivers\ContainerInterface::make('') => [
+        \Diana\Drivers\ContainerInterface::make('') => [
             "" == "@",
         ],
     ];
