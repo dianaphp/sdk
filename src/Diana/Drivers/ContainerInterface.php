@@ -2,6 +2,8 @@
 
 namespace Diana\Drivers;
 
+use Closure;
+
 interface ContainerInterface extends \Psr\Container\ContainerInterface
 {
     public function get(string $abstract): mixed;
@@ -10,4 +12,5 @@ interface ContainerInterface extends \Psr\Container\ContainerInterface
     public function call(callable|string $callback, array $parameters = [], $defaultMethod = null): mixed;
     public function instance(string $abstract, mixed $instance): void;
     public function singleton(string $abstract, mixed $concrete = null): void;
+    public function addContextualBinding(string $class, string $abstract, Closure|string $concrete): void;
 }
