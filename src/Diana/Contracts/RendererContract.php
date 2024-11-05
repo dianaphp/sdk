@@ -1,8 +1,8 @@
 <?php
 
-namespace Diana\Drivers;
+namespace Diana\Contracts;
 
-interface RendererInterface
+interface RendererContract
 {
     public function render(string $input, array $data = []): string;
 }

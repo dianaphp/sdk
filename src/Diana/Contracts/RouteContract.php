@@ -1,8 +1,8 @@
 <?php
 
-namespace Diana\Drivers;
+namespace Diana\Contracts;
 
-interface RouteInterface
+interface RouteContract
 {
     public function getMiddleware(): array;
 

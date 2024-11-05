@@ -1,8 +1,8 @@
 <?php
 
-namespace Diana\Drivers;
+namespace Diana\Contracts;
 
-interface ConfigInterface
+interface ConfigContract
 {
     public function get(?string $key = null): mixed;
 

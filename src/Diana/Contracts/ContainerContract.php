@@ -1,10 +1,10 @@
 <?php
 
-namespace Diana\Drivers;
+namespace Diana\Contracts;
 
 use Closure;
 
-interface ContainerInterface extends \Psr\Container\ContainerInterface
+interface ContainerContract extends \Psr\Container\ContainerInterface
 {
     public function get(string $abstract): mixed;
     public function has(string $abstract): bool;
