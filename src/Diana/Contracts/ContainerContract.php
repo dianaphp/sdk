@@ -13,4 +13,5 @@ interface ContainerContract extends \Psr\Container\ContainerInterface
     public function instance(string $abstract, mixed $instance): void;
     public function singleton(string $abstract, mixed $concrete = null): void;
     public function addContextualBinding(string $class, string $abstract, Closure|string $concrete): void;
+    public function alias(string $abstract, string $alias): void;
 }
