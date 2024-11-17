@@ -2,11 +2,9 @@
 
 namespace Diana\Contracts;
 
-use Diana\Event\EventInterface;
-
 interface EventManagerContract
 {
-    public function fire(EventInterface $event): void;
+    public function dispatch(object $message): void;
 
     public function createEventListener(
         string $event,
