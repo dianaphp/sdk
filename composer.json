@@ -30,7 +30,9 @@
     ],
     "require": {
         "php": ">=8.3",
-        "psr/container": "^2.0@dev"
+        "psr/container": "^2.0@dev",
+        "psr/simple-cache": "^3.0@dev",
+        "psr/http-message": "^2.0@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
