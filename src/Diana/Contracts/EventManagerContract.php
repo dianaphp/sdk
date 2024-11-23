@@ -2,29 +2,21 @@
 
 namespace Diana\Contracts;
 
-interface EventManagerContract
-{
-    public function dispatch(object $message): void;
+use Psr\EventDispatcher\EventDispatcherInterface;
 
-    public function createEventListener(
+interface EventManagerContract extends EventDispatcherInterface
+{
+    public function addEventListener(
         string $event,
-        array|string $callable,
+        callable $eventListener,
         array $before = [],
         array $after = []
-    ): EventListenerContract;
-    public function addEventListener(EventListenerContract $eventListener): void;
-    public function addNewEventListener(
+    ): callable;
+    public function addSingleEventListener(
         string $event,
-        array|string $callable,
+        callable $eventListener,
         array $before = [],
         array $after = []
-    );
-    public function addNewSingleEventListener(
-        string $event,
-        array|string $callable,
-        array $before = [],
-        array $after = []
-    );
-    public function addSingleEventListener(EventListenerContract $eventListener): void;
-    public function removeEventListener(EventListenerContract $eventListener): void;
+    ): callable;
+    public function removeEventListener(string $event, callable $eventListener): bool;
 }
