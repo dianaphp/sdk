@@ -1,10 +1,10 @@
 <?php
 
-namespace Diana\Contracts;
+namespace Diana\Contracts\Event;
 
 use Psr\EventDispatcher\EventDispatcherInterface;
 
-interface EventManagerContract extends EventDispatcherInterface
+interface Dispatcher extends EventDispatcherInterface
 {
     public function addEventListener(
         string $event,
@@ -12,11 +12,13 @@ interface EventManagerContract extends EventDispatcherInterface
         array $before = [],
         array $after = []
     ): callable;
+
     public function addSingleEventListener(
         string $event,
         callable $eventListener,
         array $before = [],
         array $after = []
     ): callable;
+
     public function removeEventListener(string $event, callable $eventListener): bool;
 }

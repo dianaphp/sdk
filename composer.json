@@ -36,7 +36,8 @@
         "psr/container": "^2.0@dev",
         "psr/simple-cache": "^3.0@dev",
         "psr/http-message": "^2.0@dev",
-        "psr/event-dispatcher": "^1.0@dev"
+        "psr/event-dispatcher": "^1.0@dev",
+        "psr/http-server-handler": "^1.0@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
